@@ -21,7 +21,7 @@ body  {
   background-color: #eee;
 }
 
-#clock-center, #clock-center-1 {
+#clock-center, #clock-center-upper {
   --center-size: 50px;
   position: absolute;
   width: var(--center-size);
@@ -32,7 +32,7 @@ body  {
   top: calc(50% - var(--center-size)*0.5);
 }
 
-#clock-center-1 {
+#clock-center-upper {
   --center-size: 30px;
   width: var(--center-size);
   height: var(--center-size);
@@ -54,7 +54,6 @@ body  {
   border: 5px solid #555;
   top: 20px;
   left: calc(50% - var(--width)*0.5);
-/*   box-shadow: 5px 5px 5px #aaa; */
   transform-origin: 50% 129px;
   animation: clock-animation 60s steps(60, end) infinite;
 }
@@ -73,12 +72,12 @@ body  {
 }
 
 .clock-dot {
+  --dot-size: 10px;
   position: absolute;
-  left: calc(50% - 5px);
-/*   top: calc(50% - 5px); */
+  left: calc(50% - var(--dot-size) / 2);
   top: -6px; 
-  width: 10px;
-  height: 10px;
+  width: var(--dot-size);
+  height: var(--dot-size);
   border-radius: 50%;
   background-color: red;
   transform-origin: 50% 156px ;
